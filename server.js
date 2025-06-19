@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express=require("express");
 const mongoose=require("mongoose");
-const port=process.env.PORT|| process.env.PORT;
+const port=process.env.PORT|| 4000;
 const salesRouter=require("./routes/salesRouter");
 const stockRouter=require("./routes/stockRoutes");
 const database=require("./utils/dbConnect");
