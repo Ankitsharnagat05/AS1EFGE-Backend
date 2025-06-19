@@ -1,3 +1,4 @@
+const express=require("express");
 const Stock = require("../models/stock");
 
 const autoFetchProductData = async (req, res, next) => {
@@ -15,7 +16,7 @@ const autoFetchProductData = async (req, res, next) => {
         // 🛡️ Secure: Only fetch stock from the current user's stock entries
         const stockItem = await Stock.findOne({
           productName: product.productName,
-          user: userId
+          userId: userId
         });
 
         if (!stockItem) {
