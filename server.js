@@ -14,7 +14,7 @@ const app=express();
 
 
 const corsOptions={
-    origin:["http://localhost:5173"],
+    origin:["http://localhost:5173","https://as1edge.netlify.app/"],
     method:"GET,POST,PUT,DELETE,PATCH,HEAD",
     credentials:true,
 }
